@@ -8,18 +8,7 @@ function App() {
     <nav className="navbar navbar-expand-lg navbar-light bg-light mt-0 container-fluid">
       {/* Container wrapper */}
       <div className="container-fluid">
-        {/* Toggle button */}
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-mdb-toggle="collapse"
-          data-mdb-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          
-        </button>
+       
         {/* Collapsible wrapper */}
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           {/* Navbar brand */}
