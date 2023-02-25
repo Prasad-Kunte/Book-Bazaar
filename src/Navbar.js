@@ -1,3 +1,6 @@
+ import {Link} from 'react-router-dom'
+ import * as mdb from 'mdb-ui-kit'; 
+ import { Input } from 'mdb-ui-kit';
 function Navbar(){
     return(<>
         {/* Navbar */}
@@ -112,7 +115,7 @@ function Navbar(){
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <a className="dropdown-item" href="logout">
                       Logout
                     </a>
                   </li>
