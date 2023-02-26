@@ -1,12 +1,11 @@
  import {Link} from 'react-router-dom'
  import * as mdb from 'mdb-ui-kit'; 
  import { Input } from 'mdb-ui-kit';
- import logo from './logo.jpeg';
- import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
  
 function Navbar(){
     return(<>
-   <div> <nav class="navbar navbar-expand-lg navbar-light bg-light mt-0 container-fluid">
+   <div > <nav class="navbar navbar-expand-lg navbar-light bg-light mt-0 container-fluid sticky-top">
   <div class="container-fluid">
    
     <div class="collapse navbar-collapse d-flex align-items-center justify-content-center"  >
@@ -44,7 +43,7 @@ function Navbar(){
               {/* Navbar brand */}
               <a className="navbar-brand mt-2 mt-lg-0" href="#">
                 <img
-                  src={logo}
+                  
                   height={20}
                   alt="MDB Logo"
                   loading="lazy"
