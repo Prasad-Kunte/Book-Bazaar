@@ -1,8 +1,39 @@
  import {Link} from 'react-router-dom'
  import * as mdb from 'mdb-ui-kit'; 
  import { Input } from 'mdb-ui-kit';
+ import logo from './logo.jpeg';
+ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+ 
 function Navbar(){
     return(<>
+   <div> <nav class="navbar navbar-expand-lg navbar-light bg-light mt-0 container-fluid">
+  <div class="container-fluid">
+   
+    <div class="collapse navbar-collapse d-flex align-items-center justify-content-center"  >
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <h2><a class="nav-link active text-primary " aria-current="page" href="#">BOOKBAZAAR</a></h2>
+        </li>
+      </ul>
+      <form class="d-flex input-group w-auto">
+        <input
+          type="search"
+          class="form-control"
+          placeholder="search for books"
+          aria-label="Search"
+        />
+        <button
+          class="btn btn-outline-primary"
+          type="button"
+          data-mdb-ripple-color="dark"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+  </div>
+ 
+</nav></div>
         {/* Navbar */}
         <nav className="navbar navbar-expand-lg navbar-light bg-light mt-0 container-fluid">
           {/* Container wrapper */}
@@ -13,8 +44,8 @@ function Navbar(){
               {/* Navbar brand */}
               <a className="navbar-brand mt-2 mt-lg-0" href="#">
                 <img
-                  src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-                  height={15}
+                  src={logo}
+                  height={20}
                   alt="MDB Logo"
                   loading="lazy"
                 />
@@ -23,18 +54,188 @@ function Navbar(){
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <a className="nav-link" href="#">
-                    Dashboard
+                    Home 
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Team
-                  </a>
+                <div className="dropdown">
+                <a
+                  className="dropdown-toggle d-flex align-items-center hidden-arrow nav-link"
+                  href="#"
+                  id="navbarDropdownMenuAvatar"
+                  role="button"
+                  data-mdb-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                 Genre
+                </a>
+                <ul
+                  className="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="navbarDropdownMenuAvatar"
+                >
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Fiction
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Novel
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="logout">
+                      Narrative
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Genre fiction
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Science fiction
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Mystery
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Non-fiction
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Fantasy Fiction
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Literary fiction
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Horror fiction
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Historical Fiction
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Children's literature
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Thriller
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Romance novel
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Projects
-                  </a>
+                <div className="dropdown">
+                <a
+                  className="dropdown-toggle d-flex align-items-center hidden-arrow nav-link "
+                  href="#"
+                  id="navbarDropdownMenuAvatar"
+                  role="button"
+                  data-mdb-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                 Year
+                </a>
+                <ul
+                  className="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="navbarDropdownMenuAvatar"
+                >
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Fiction
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Novel
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="logout">
+                      Narrative
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Genre fiction
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Science fiction
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Mystery
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Non-fiction
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Fantasy Fiction
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Literary fiction
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Horror fiction
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Historical Fiction
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Children's literature
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Thriller
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                    Romance novel
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
                 </li>
               </ul>
               {/* Left links */}
@@ -58,7 +259,7 @@ function Navbar(){
                 >
                   <i className="fas fa-bell" />
                   <span className="badge rounded-pill badge-notification bg-danger">
-                    1
+                   
                   </span>
                 </a>
                 <ul
@@ -93,10 +294,10 @@ function Navbar(){
                   aria-expanded="false"
                 >
                   <img
-                    src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                    src="dsfdfg"
                     className="rounded-circle"
                     height={25}
-                    alt="Black and White Portrait of a Man"
+                    alt="fa-solid fa-user-large"
                     loading="lazy"
                   />
                 </a>
