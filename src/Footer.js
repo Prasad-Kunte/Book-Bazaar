@@ -11,22 +11,19 @@ function Footer(){
             {/* Left */}
             {/* Right */}
             <div>
-              <a href="" className="me-4 link-secondary">
+              <a href="https://www.facebook.com/cdacmumbai/" className="me-4 link-secondary">
                 <i className="fab fa-facebook-f" />
               </a>
-              <a href="" className="me-4 link-secondary">
+              <a href="https://twitter.com/cdacmumbai" className="me-4 link-secondary">
                 <i className="fab fa-twitter" />
               </a>
-              <a href="" className="me-4 link-secondary">
-                <i className="fab fa-google" />
-              </a>
-              <a href="" className="me-4 link-secondary">
+              <a href="https://www.instagram.com/cdac_mumbai/?hl=en" className="me-4 link-secondary">
                 <i className="fab fa-instagram" />
               </a>
-              <a href="" className="me-4 link-secondary">
+              <a href="https://www.linkedin.com/company/deep-learning-course-at-cdac-mumbai/" className="me-4 link-secondary">
                 <i className="fab fa-linkedin" />
               </a>
-              <a href="" className="me-4 link-secondary">
+              <a href="https://github.com/Prasad-Kunte/Book-Bazaar.git" className="me-4 link-secondary">
                 <i className="fab fa-github" />
               </a>
             </div>
@@ -43,21 +40,21 @@ function Footer(){
                   {/* Content */}
                   <h6 className="text-uppercase fw-bold mb-4">
                     <i className="fas fa-gem me-3 text-secondary" />
-                    Company name
+                    BOOK BAZAAR
                   </h6>
                   <p>
-                    Here you can use rows and columns to organize your footer content.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  The Book Bazaar website is a platform designed to provide customers with a wide selection of books,
+                   including new books, used books for resale, and a rental service for books. 
                   </p>
                 </div>
                 {/* Grid column */}
                 {/* Grid column */}
                 <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                   {/* Links */}
-                  <h6 className="text-uppercase fw-bold mb-4">Products</h6>
+                  <h6 className="text-uppercase fw-bold mb-4">P</h6>
                   <p>
                     <a href="#!" className="text-reset">
-                      Angular
+                      A
                     </a>
                   </p>
                   <p>
@@ -67,12 +64,12 @@ function Footer(){
                   </p>
                   <p>
                     <a href="#!" className="text-reset">
-                      Vue
+                      V
                     </a>
                   </p>
                   <p>
                     <a href="#!" className="text-reset">
-                      Laravel
+                      L
                     </a>
                   </p>
                 </div>
@@ -81,16 +78,7 @@ function Footer(){
                 <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                   {/* Links */}
                   <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
-                  <p>
-                    <a href="#!" className="text-reset">
-                      Pricing
-                    </a>
-                  </p>
-                  <p>
-                    <a href="#!" className="text-reset">
-                      Settings
-                    </a>
-                  </p>
+                  
                   <p>
                     <a href="#!" className="text-reset">
                       Orders
@@ -108,18 +96,17 @@ function Footer(){
                   {/* Links */}
                   <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
                   <p>
-                    <i className="fas fa-home me-3 text-secondary" /> New York, NY
-                    10012, US
+                    <i className="fas fa-home me-3 text-secondary" /> Raintree Marg, near Bharati Vidyapeeth, Sector 7, CBD Belapur, Navi Mumbai, Maharashtra 400614
                   </p>
                   <p>
                     <i className="fas fa-envelope me-3 text-secondary" />
-                    info@example.com
+                    faculty-kharghar@cdac.in
                   </p>
                   <p>
-                    <i className="fas fa-phone me-3 text-secondary" /> + 01 234 567 88
+                    <i className="fas fa-phone me-3 text-secondary" /> + 91 976 429 1977
                   </p>
                   <p>
-                    <i className="fas fa-print me-3 text-secondary" /> + 01 234 567 89
+                    <i className="fas fa-print me-3 text-secondary" /> + 91 951 184 9516
                   </p>
                 </div>
                 {/* Grid column */}
