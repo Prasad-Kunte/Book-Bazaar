@@ -1,6 +1,7 @@
  import {Link} from 'react-router-dom'
  import * as mdb from 'mdb-ui-kit'; 
  import { Input } from 'mdb-ui-kit';
+ import logo from './logo.png';
 
  
 function Navbar(){
@@ -32,9 +33,9 @@ function Navbar(){
     </div>
   </div>
  
-</nav></div>
+</nav>
         {/* Navbar */}
-        <nav className="navbar navbar-expand-lg navbar-light bg-light mt-0 container-fluid">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light container-fluid mb-5 sticky-top">
           {/* Container wrapper */}
           <div className="container-fluid">
            
@@ -43,8 +44,8 @@ function Navbar(){
               {/* Navbar brand */}
               <a className="navbar-brand mt-2 mt-lg-0" href="#">
                 <img
-                  
-                  height={20}
+                  src={logo}
+                  height={30}
                   alt="MDB Logo"
                   loading="lazy"
                 />
@@ -293,7 +294,7 @@ function Navbar(){
                   aria-expanded="false"
                 >
                   <img
-                    src="dsfdfg"
+                    src="https://images-cdn.reedsy.com/discovery/post/40/featured_image/medium_ac329dc034dac928ffdad69d752e62114b594d0e.jpg"
                     className="rounded-circle"
                     height={25}
                     alt="fa-solid fa-user-large"
@@ -326,7 +327,10 @@ function Navbar(){
           </div>
           {/* Container wrapper */}
         </nav>
+        
         {/* Navbar */}
+        </div>
+      
       </>);
 }
 export default Navbar;
