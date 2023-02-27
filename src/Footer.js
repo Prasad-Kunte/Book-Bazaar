@@ -6,7 +6,7 @@ function Footer(){
           <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
             {/* Left */}
             <div className="me-5 d-none d-lg-block">
-              <span>Get connected with us on social networks:</span>
+              <span>Get connected with us on Social Networks:</span>
             </div>
             {/* Left */}
             {/* Right */}
