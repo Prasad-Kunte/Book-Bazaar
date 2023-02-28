@@ -36,41 +36,30 @@ function Homecontent()
     <div className="carousel-inner rounded-5 shadow-4-strong">
       <div className="carousel-item active">
         <img
-          src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp"
+          src="https://www.booksmeridian.com/assets/images/banners/1050923103.png"
           className="d-block w-100"
           style={{ height: "60%" }}
           alt="Sunset Over the City"
         />
-        <div className="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </div>
+       
       </div>
       <div className="carousel-item">
         <img
-          src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(22).webp"
+          src="https://www.booksmeridian.com/assets/images/banners/216719612.jpg"
           className="d-block w-100"
           style={{ height: "60%" }}
           alt="Canyon at Nigh"
         />
-        <div className="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
+       
       </div>
       <div className="carousel-item">
         <img
-          src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(23).webp"
+          src="https://www.booksmeridian.com/assets/images/banners/1350268823.jpg"
           className="d-block w-100"
           style={{ height: "60%" }}
           alt="Cliff Above a Stormy Sea"
         />
-        <div className="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </div>
+       
       </div>
     </div>
     <button
@@ -132,6 +121,138 @@ s
     </div>
     <hr class="hr hr-blurry" />
     
+    <div>
+    <div className="row row-cols-1 row-cols-md-6 g-4">
+  <div className="col">
+    <div className="card">
+      <img src="https://www.booksmeridian.com/assets/images/category/1621838604.jpg" className="card-img-top" alt="..." />
+      
+    </div>
+  </div>
+  <div className="col">
+    <div className="card">
+      <img src="https://www.booksmeridian.com/assets/images/category/1621838653.jpg" className="card-img-top" alt="..." />
+      
+    </div>
+  </div>
+  <div className="col">
+    <div className="card">
+      <img src="https://www.booksmeridian.com/assets/images/category/1621838767.jpg" className="card-img-top" alt="..." />
+      
+    </div>
+  </div>
+  <div className="col">
+    <div className="card">
+      <img src="https://www.booksmeridian.com/assets/images/category/1621838975.jpg" className="card-img-top" alt="..." />
+      
+    </div>
+  </div>
+  <div className="col">
+    <div className="card">
+      <img src="https://www.booksmeridian.com/assets/images/category/1621838904.jpg" className="card-img-top" alt="..." />
+      
+    </div>
+  </div>
+  <div className="col">
+    <div className="card">
+      <img src="https://www.booksmeridian.com/assets/images/category/1622109420.jpg" className="card-img-top" alt="..." />
+      
+    </div>
+  </div>
+  <div className="col">
+    <div className="card">
+      <img src="https://www.booksmeridian.com/assets/images/category/1621838750.jpg" className="card-img-top" alt="..." />
+      
+    </div>
+  </div>
+  <div className="col">
+    <div className="card">
+      <img src="https://www.booksmeridian.com/assets/images/category/1621839005.jpg" className="card-img-top" alt="..." />
+      
+    </div>
+  </div>
+  <div className="col">
+    <div className="card">
+      <img src="https://www.booksmeridian.com/assets/images/category/1621838820.jpg" className="card-img-top" alt="..." />
+      
+    </div>
+  </div>
+  <div className="col">
+    <div className="card">
+      <img src="https://www.booksmeridian.com/assets/images/category/1621838841.jpg" className="card-img-top" alt="..." />
+      
+    </div>
+  </div>
+  <div className="col">
+    <div className="card">
+      <img src="https://www.booksmeridian.com/assets/images/category/1621838952.jpg" className="card-img-top" alt="..." />
+      
+    </div>
+  </div>
+  <div className="col">
+    <div className="card">
+      <img src="https://www.booksmeridian.com/assets/images/category/1621838927.jpg" className="card-img-top" alt="..." />
+      
+    </div>
+  </div>
+  <div className="col">
+    <div className="card">
+      <img src="https://www.booksmeridian.com/assets/images/category/1621838801.jpg" className="card-img-top" alt="..." />
+      
+    </div>
+  </div>
+  <div className="col">
+    <div className="card">
+      <img src="https://www.booksmeridian.com/assets/images/category/1621838879.jpg" className="card-img-top" alt="..." />
+      
+    </div>
+  </div>
+  <div className="col">
+    <div className="card">
+      <img src="https://www.booksmeridian.com/assets/images/category/1622109343.jpg" className="card-img-top" alt="..." />
+      
+    </div>
+  </div>
+  <div className="col">
+    <div className="card">
+      <img src="https://www.booksmeridian.com/assets/images/category/1622109377.jpg" className="card-img-top" alt="..." />
+      
+    </div>
+  </div>
+  <div className="col">
+    <div className="card">
+      <img src="https://www.booksmeridian.com/assets/images/category/1621838720.jpg" className="card-img-top" alt="..." />
+      
+    </div>
+  </div>
+  <div className="col">
+    <div className="card">
+      <img src="https://www.booksmeridian.com/assets/images/category/1621838670.jpg" className="card-img-top" alt="..." />
+      
+    </div>
+  </div>
+  <div className="col">
+    <div className="card">
+      <img src="https://www.booksmeridian.com/assets/images/category/1622111387.jpg" className="card-img-top" alt="..." />
+      
+    </div>
+  </div>
+  <div className="col">
+    <div className="card">
+      <img src="https://www.booksmeridian.com/assets/images/category/1621838698.jpg" className="card-img-top" alt="..." />
+      
+    </div>
+  </div>
+  <div className="col">
+    <div className="card">
+      <img src="https://www.booksmeridian.com/assets/images/category/1621838685.jpg" className="card-img-top" alt="..." />
+      
+    </div>
+  </div>
+  
+</div>
+
+    </div>
   
   
 
