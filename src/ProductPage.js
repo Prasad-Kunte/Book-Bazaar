@@ -85,7 +85,7 @@ function ProductPage() {
                       <div className="col-xs-4">
                         <button
                           type="submit"
-                          className="btn btn-block btn-default"
+                          className="btn btn-block btn-success"
                         >
                           Go
                         </button>
@@ -232,8 +232,8 @@ function ProductPage() {
                 <div className="radio">
                   <input
                     type="radio"
-                    name="shop-filter__radio"
-                    id="shop-filter-radio_2"
+                    name="shop-filter1__radio"
+                    id="shop-filter1-radio_2"
                     defaultValue
                   />
                   <label htmlFor="shop-filter1-radio_2">Publisher 2</label>
@@ -241,11 +241,44 @@ function ProductPage() {
                 <div className="radio">
                   <input
                     type="radio"
-                    name="shop-filter__radio"
-                    id="shop-filter-radio_3"
+                    name="shop-filter1__radio"
+                    id="shop-filter1-radio_3"
                     defaultValue
                   />
                   <label htmlFor="shop-filter1-radio_3">Publisher 3</label>
+                </div>
+                <div style={{ height: "20px", width: "50%" }}></div>
+
+                <h3 className="headline">
+                  <span>Author</span>
+                </h3>
+                <div className="radio">
+                  <input
+                    type="radio"
+                    name="shop-filter2__radio"
+                    id="shop-filter2-radio_1"
+                    defaultValue
+                    defaultChecked
+                  />
+                  <label htmlFor="shop-filter2-radio_1">Author 1</label>
+                </div>
+                <div className="radio">
+                  <input
+                    type="radio"
+                    name="shop-filter2__radio"
+                    id="shop-filter2-radio_2"
+                    defaultValue
+                  />
+                  <label htmlFor="shop-filter2-radio_2">Author 2</label>
+                </div>
+                <div className="radio">
+                  <input
+                    type="radio"
+                    name="shop-filter2__radio"
+                    id="shop-filter2-radio_3"
+                    defaultValue
+                  />
+                  <label htmlFor="shop-filter2-radio_3">Author 3</label>
                 </div>
               </form>
             </div>
