@@ -3,6 +3,10 @@ import book from "./photos/book.png";
 function ProductPage() {
   return (
     <>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
       <div style={{ height: "200px", width: "50%" }}></div>
       <div>
         <div className="container">
@@ -285,7 +289,7 @@ function ProductPage() {
             <div className="col-sm-8 col-md-9">
               {/* Filters */}
               <ul className="shop__sorting">
-                <li className="active">
+                <li className="">
                   <a href="#">Popular</a>
                 </li>
                 <li>
@@ -323,6 +327,12 @@ function ProductPage() {
                           &#8377; 59.99
                         </span>
                       </div>
+                      <button
+                        className="btn btn-success"
+                        style={{ fontSize: "14px" }}
+                      >
+                        Add to Cart <i className="fa fa-shopping-cart" />
+                      </button>
                     </a>
                   </div>
                 </div>
@@ -341,6 +351,12 @@ function ProductPage() {
                       <div className="shop-thumb__price">
                         <span className="shop-thumb-price">&#8377; 80.99</span>
                       </div>
+                      <button
+                        className="btn btn-success"
+                        style={{ fontSize: "14px" }}
+                      >
+                        Add to Cart <i className="fa fa-shopping-cart" />
+                      </button>
                     </a>
                   </div>
                 </div>
@@ -365,6 +381,12 @@ function ProductPage() {
                           &#8377; 59.99
                         </span>
                       </div>
+                      <button
+                        className="btn btn-success"
+                        style={{ fontSize: "14px" }}
+                      >
+                        Add to Cart <i className="fa fa-shopping-cart" />
+                      </button>
                     </a>
                   </div>
                 </div>
@@ -383,6 +405,12 @@ function ProductPage() {
                       <div className="shop-thumb__price">
                         <span className="shop-thumb-price">&#8377; 80.99</span>
                       </div>
+                      <button
+                        className="btn btn-success"
+                        style={{ fontSize: "14px" }}
+                      >
+                        Add to Cart <i className="fa fa-shopping-cart" />
+                      </button>
                     </a>
                   </div>
                 </div>
@@ -407,6 +435,12 @@ function ProductPage() {
                           &#8377; 59.99
                         </span>
                       </div>
+                      <button
+                        className="btn btn-success"
+                        style={{ fontSize: "14px" }}
+                      >
+                        Add to Cart <i className="fa fa-shopping-cart" />
+                      </button>
                     </a>
                   </div>
                 </div>
@@ -425,6 +459,12 @@ function ProductPage() {
                       <div className="shop-thumb__price">
                         <span className="shop-thumb-price">&#8377; 80.99</span>
                       </div>
+                      <button
+                        className="btn btn-success"
+                        style={{ fontSize: "14px" }}
+                      >
+                        Add to Cart <i className="fa fa-shopping-cart" />
+                      </button>
                     </a>
                   </div>
                 </div>
@@ -449,6 +489,12 @@ function ProductPage() {
                           &#8377; 59.99
                         </span>
                       </div>
+                      <button
+                        className="btn btn-success"
+                        style={{ fontSize: "14px" }}
+                      >
+                        Add to Cart <i className="fa fa-shopping-cart" />
+                      </button>
                     </a>
                   </div>
                 </div>
@@ -467,6 +513,12 @@ function ProductPage() {
                       <div className="shop-thumb__price">
                         <span className="shop-thumb-price">&#8377; 80.99</span>
                       </div>
+                      <button
+                        className="btn btn-success"
+                        style={{ fontSize: "14px" }}
+                      >
+                        Add to Cart <i className="fa fa-shopping-cart" />
+                      </button>
                     </a>
                   </div>
                 </div>
@@ -485,6 +537,12 @@ function ProductPage() {
                       <div className="shop-thumb__price">
                         <span className="shop-thumb-price">&#8377; 80.99</span>
                       </div>
+                      <button
+                        className="btn btn-success"
+                        style={{ fontSize: "14px" }}
+                      >
+                        Add to Cart <i className="fa fa-shopping-cart" />
+                      </button>
                     </a>
                   </div>
                 </div>
