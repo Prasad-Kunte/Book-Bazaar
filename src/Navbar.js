@@ -22,13 +22,14 @@ function Navbar(){
           placeholder="search for books"
           aria-label="Search"
         />
+        <Link to="ProductPage">
         <button
           class="btn btn-outline-primary"
           type="button"
           data-mdb-ripple-color="dark"
         >
           Search
-        </button>
+        </button></Link>
       </form>
     </div>
   </div>
