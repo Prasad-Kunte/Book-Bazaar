@@ -11,6 +11,9 @@ import './App.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Homecontent from './Homecontent';
+import Genre from './Genre';
+import BookDetails from './BookDetails';
+
 
 
 
@@ -20,15 +23,25 @@ function App() {
 
       <BrowserRouter>
         <Navbar></Navbar>
+       
 
         <Routes>
-          <Route path="/" element={<Homecontent></Homecontent>}></Route>
+          <Route path="/" element={<Homecontent/> }></Route>
           <Route
             path="/ProductPage"
             element={<ProductPage></ProductPage>}
           ></Route>
+          <Route
+            path="/Genre"
+            element={<Genre></Genre>}
+          ></Route>
+          <Route
+            path="/Details"
+            element={<BookDetails/>}
+          ></Route>
         </Routes>
         <Footer></Footer>
+        
       </BrowserRouter>
     </>
 

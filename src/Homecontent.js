@@ -1,5 +1,5 @@
-
-
+import { Link } from "react-router-dom";
+import Famous from './Famous';
 function Homecontent()
 {
     return(<>
@@ -83,42 +83,10 @@ function Homecontent()
   </div></div>
   {/* Carousel wrapper */}
 </>
-s
 
+<Famous/>
 
-    <hr class="hr hr-blurry" />
-    <div className="m-2 d-flex justify-content-between">
-      <h3>HORROR</h3>
-      <button className="card-link btn btn-primary">
-      View More
-    </button>
-    </div>
-    <div className="row m-2 ">
-    <div className="col-sm-3">
-    <div className="card shadow-lg p-3 mb-5 bg-white rounded " style={{ width: "18rem" }}>
-  <img src='C:\Users\PRASAD KUNTE\Desktop\Book Bazaar\bookbazaar\src\it.jpg' className="card-img-top" alt="..." />
-  <div className="card-body">
-    <h5 className="card-title">IT</h5>
-    
-  </div>
-  <ul className="list-group list-group-flush">
-    <li className="list-group-item">Stephen King</li>
-    <li className="list-group-item">15 September 1986</li>
-    <li className="list-group-item">Horror</li>
-  </ul>
-  <div className="card-body">
-    <a href="#" className="card-link">
-    
-    </a>
-    <button className="card-link btn btn-primary">
-      Add To Cart<i className="fas fa-shopping-cart" />
-    </button>
-  </div>
-</div>
-</div>
-    
-
-    </div>
+   
     <hr class="hr hr-blurry" />
     
     <div>
@@ -131,7 +99,7 @@ s
   </div>
   <div className="col">
     <div className="card">
-      <img src="https://www.booksmeridian.com/assets/images/category/1621838653.jpg" className="card-img-top" alt="..." />
+      <Link to="Genre" ><img src="https://www.booksmeridian.com/assets/images/category/1621838653.jpg" className="card-img-top" alt="..." /></Link>
       
     </div>
   </div>
