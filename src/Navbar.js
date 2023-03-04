@@ -22,13 +22,14 @@ function Navbar(){
           placeholder="search for books"
           aria-label="Search"
         />
+        <Link to="ProductPage">
         <button
           class="btn btn-outline-primary"
           type="button"
           data-mdb-ripple-color="dark"
         >
           Search
-        </button>
+        </button></Link>
       </form>
     </div>
   </div>
@@ -53,9 +54,9 @@ function Navbar(){
               {/* Left links */}
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <Link className="nav-link" to="/">
                     Home 
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
                 <div className="dropdown">
