@@ -1,9 +1,7 @@
 
-import logo from "./logo.svg";
+
 import "./App.css"
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import * as mdb from "mdb-ui-kit";
-import { Input } from "mdb-ui-kit";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProductPage from "./ProductPage";
 
 
@@ -13,17 +11,19 @@ import Footer from './Footer';
 import Homecontent from './Homecontent';
 import Genre from './Genre';
 import BookDetails from './BookDetails';
+import RentHomePage from "./RentHomePage";
 
 
 
 
 function App() {
+  
   return (
     <><>
 
       <BrowserRouter>
         <Navbar></Navbar>
-       
+       {/* <RentHomePage/> */}
 
         <Routes>
           <Route path="/" element={<Homecontent/> }></Route>
