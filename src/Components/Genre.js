@@ -1,4 +1,4 @@
-import book from "./photos/book.png";
+import book from "../photos/book.png";
 function Genre()
 {
     return(<> <link
