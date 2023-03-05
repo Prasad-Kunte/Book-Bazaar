@@ -1,6 +1,6 @@
-
 import { Link } from 'react-router-dom';
 import logo from './logo.png';
+
 function RentHomePage()
 {
     return(
@@ -16,7 +16,7 @@ function RentHomePage()
               </Link>
   <div className="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
     <ul className="navbar-nav mr-auto">
-      <li className="nav-item active">
+      <li className="nav-item ">
         <Link className="nav-link" to="/">
           Home <span className="sr-only">(current)</span>
         </Link>

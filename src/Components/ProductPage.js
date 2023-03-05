@@ -1,5 +1,5 @@
 import "./ProductPage.css";
-import book from "./photos/book.png";
+import book from "../photos/book.png";
 function ProductPage() {
   return (
     <>
