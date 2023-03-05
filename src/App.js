@@ -11,7 +11,7 @@ import './App.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Homecontent from './Homecontent';
-
+import Cart from "./Cart";
 
 
 function App() {
@@ -23,10 +23,12 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Homecontent></Homecontent>}></Route>
+          <Route path='/Cart' element={<Cart/>}></Route>
           <Route
             path="/ProductPage"
             element={<ProductPage></ProductPage>}
           ></Route>
+          
         </Routes>
         <Footer></Footer>
       </BrowserRouter>
