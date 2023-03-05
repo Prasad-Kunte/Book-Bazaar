@@ -1,9 +1,6 @@
 import upi from "./photos/upi-icon.svg"
 import rupay from "./photos/rupay-logo-icon.svg";
   function Cart() {
-
-
-
     return (
 
       <section className="h-100 gradient-custom">
