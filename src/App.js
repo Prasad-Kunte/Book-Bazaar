@@ -15,6 +15,8 @@ import BookDetails from './Components/BookDetails';
 import RentHomePage from "./Components/RentHomePage";
 import RentContent from "./Components/RentContent";
 import Checkout from "./Components/Checkout";
+import Update from "./Components/Update";
+import ProfilePage from "./Components/ProfilePage";
 import {setGlobalState , useGlobalState} from "./sitelocaton";
 
 
@@ -41,6 +43,7 @@ function App() {
         path="/Genre"
         element={<Genre></Genre>}
       ></Route>
+      <Route path="/ProfilePage" element={<ProfilePage />}></Route>
       <Route
         path="/Details"
         element={<BookDetails/>}
@@ -64,6 +67,9 @@ function App() {
             path="/ProductPage"
             element={<ProductPage></ProductPage>}
           ></Route>
+          <Route path="/ProfilePage" element={<ProfilePage />}></Route>
+          
+            <Route path="/Update" element={<Update/>}></Route>
           <Route
             path="/Genre"
             element={<Genre></Genre>}
