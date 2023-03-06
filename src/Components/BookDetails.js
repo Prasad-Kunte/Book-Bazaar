@@ -1,4 +1,5 @@
 import "./BookDe.css"
+import {Link} from 'react-router-dom'
 function BookDetails()
 {
     return (<><div className="container">
@@ -46,6 +47,9 @@ function BookDetails()
               <button className="add-to-cart btn btn-default" type="button">
                 add to cart
               </button>
+              <Link to="/Checkout"><button className="add-to-cart btn btn-default" type="button">
+                Buy Now
+              </button></Link>
               <button className="like btn btn-default" type="button">
                 <span className="fa fa-heart" />
               </button>

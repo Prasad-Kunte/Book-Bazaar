@@ -14,6 +14,7 @@ import Genre from './Components/Genre';
 import BookDetails from './Components/BookDetails';
 import RentHomePage from "./Components/RentHomePage";
 import RentContent from "./Components/RentContent";
+import Checkout from "./Components/Checkout";
 import {setGlobalState , useGlobalState} from "./sitelocaton";
 
 
@@ -44,6 +45,7 @@ function App() {
         path="/Details"
         element={<BookDetails/>}
       ></Route>
+      <Route path="/Checkout" element={<Checkout></Checkout>}></Route>
     </Routes>
     <Footer></Footer>
     </BrowserRouter></>);
@@ -70,6 +72,7 @@ function App() {
             path="/Details"
             element={<BookDetails/>}
           ></Route>
+          <Route path="/Checkout" element={<Checkout></Checkout>}></Route>
         </Routes>
         <Footer></Footer>
         

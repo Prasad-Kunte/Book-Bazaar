@@ -1,4 +1,4 @@
-import book from "./photos/book.png";
+
 
 function Checkout() {
   return (
@@ -518,7 +518,7 @@ function Checkout() {
                     1
                   </span>
                   <img
-                    src={book}
+                    src="/images/book.png"
                     style={{ height: "96px", width: "96x" }}
                     className="img-sm rounded border"
                   />
@@ -537,7 +537,7 @@ function Checkout() {
                     1
                   </span>
                   <img
-                    src={book}
+                    src="/images/book.png"
                     style={{ height: "96px", width: "96x" }}
                     className="img-sm rounded border"
                   />
