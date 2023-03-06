@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 function Footer(){
     return(<>
         {/* Footer */}
@@ -65,6 +66,11 @@ function Footer(){
                     <a href="#!" className="text-reset">
                       Help
                     </a>
+                  </p>
+                  <p>
+                    <Link to="/Aboutus" className="text-reset">
+                      About Us
+                    </Link>
                   </p>
                 </div>
                 {/* Grid column */}
