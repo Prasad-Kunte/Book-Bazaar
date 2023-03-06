@@ -9,8 +9,22 @@ function RentHomePage()
     setGlobalState("sLocation","newbook");
   };
     return(
-    <>
-    <nav className="navbar navbar-expand-lg navbar-light bg-light container-fluid " >
+    <><div className="sticky-top">
+     <nav className="navbar navbar-expand-lg navbar-light bg-light mt-0 container-fluid sticky-top">
+  <div className="container-fluid">
+   
+    <div className="collapse navbar-collapse d-flex align-items-center justify-content-center"  >
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          <h2><a className="nav-link active text-primary " aria-current="page" href="#">BOOKBAZAAR</a></h2>
+        </li>
+      </ul>
+     
+    </div>
+  </div>
+ 
+</nav>
+    <nav className="navbar navbar-expand-lg navbar-light mt-0 bg-light container-fluid " >
     <Link className="navbar-brand mt-2 mt-lg-0" to="/">
                 <img
                   src="/images/logo.png"
@@ -57,7 +71,7 @@ function RentHomePage()
     </form>
   </div>
 </nav>
-
+</div>
     </>
     );
 }

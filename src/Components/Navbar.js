@@ -10,25 +10,25 @@ function Navbar(){
     setGlobalState("sLocation","rent");
   };
     return(<>
-   <div > <nav class="navbar navbar-expand-lg navbar-light bg-light mt-0 container-fluid sticky-top">
-  <div class="container-fluid">
+   <div className=" sticky-top"> <nav className="navbar navbar-expand-lg navbar-light bg-light mt-0 container-fluid sticky-top">
+  <div className="container-fluid">
    
-    <div class="collapse navbar-collapse d-flex align-items-center justify-content-center"  >
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <h2><a class="nav-link active text-primary " aria-current="page" href="#">BOOKBAZAAR</a></h2>
+    <div className="collapse navbar-collapse d-flex align-items-center justify-content-center"  >
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          <h2><a className="nav-link active text-primary " aria-current="page" href="#">BOOKBAZAAR</a></h2>
         </li>
       </ul>
-      <form class="d-flex input-group w-auto">
+      <form className="d-flex input-group w-auto">
         <input
           type="search"
-          class="form-control"
+          className="form-control"
           placeholder="search for books"
           aria-label="Search"
         />
         <Link to="ProductPage">
         <button
-          class="btn btn-outline-primary"
+          className="btn btn-outline-primary"
           type="button"
           data-mdb-ripple-color="dark"
         >
@@ -40,7 +40,7 @@ function Navbar(){
  
 </nav>
         {/* Navbar */}
-        <nav className="navbar navbar-expand-lg navbar-light bg-light container-fluid mb-5 sticky-top">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light container-fluid mt-0 sticky-top">
           {/* Container wrapper */}
           <div className="container-fluid">
            
