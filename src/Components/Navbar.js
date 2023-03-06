@@ -1,10 +1,14 @@
  import {Link} from 'react-router-dom'
  import * as mdb from 'mdb-ui-kit'; 
  import { Input } from 'mdb-ui-kit';
- import logo from './logo.png';
+ 
+import {setGlobalState , useGlobalState} from "../sitelocaton";
 
  
 function Navbar(){
+  const changeSiteLocation = () => {
+    setGlobalState("sLocation","rent");
+  };
     return(<>
    <div > <nav class="navbar navbar-expand-lg navbar-light bg-light mt-0 container-fluid sticky-top">
   <div class="container-fluid">
@@ -45,7 +49,7 @@ function Navbar(){
               {/* Navbar brand */}
               <a className="navbar-brand mt-2 mt-lg-0" href="#">
                 <img
-                  src={logo}
+                  src="/images/logo.png"
                   height={30}
                   alt="MDB Logo"
                   loading="lazy"
@@ -58,6 +62,12 @@ function Navbar(){
                     Home 
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link" onClick={changeSiteLocation}>
+                  old books 
+                  </Link>
+                </li>
+                
                 <li className="nav-item">
                 <div className="dropdown">
                 <a
@@ -238,6 +248,7 @@ function Navbar(){
                 </ul>
               </div>
                 </li>
+                
               </ul>
               {/* Left links */}
             </div>

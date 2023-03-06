@@ -7,17 +7,23 @@ import ProductPage from "./Components/ProductPage";
 
 import './App.css';
 import Navbar from './Components/Navbar';
+import './sitelocaton';
 import Footer from './Components/Footer';
 import Homecontent from './Components/Homecontent';
 import Genre from './Components/Genre';
 import BookDetails from './Components/BookDetails';
 import RentHomePage from "./Components/RentHomePage";
 import RentContent from "./Components/RentContent";
+import {setGlobalState , useGlobalState} from "./sitelocaton";
 
-
-var location="rent"
 
 function App() {
+
+  
+  window.onload = (event) => {
+   setGlobalState("sLocation",location);
+  };
+  const [location]=useGlobalState("sLocation");
   if(location==="rent")
   {
     return(<>
@@ -42,7 +48,7 @@ function App() {
     <Footer></Footer>
     </BrowserRouter></>);
   }
-  else{
+  else if(location==="newbook"){
   return (
     <><>
 
