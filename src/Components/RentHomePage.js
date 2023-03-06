@@ -1,14 +1,19 @@
 import { Link } from 'react-router-dom';
-import logo from './logo.png';
+// import logo from '../bookbazaar/public/logo.png';
+import '../sitelocaton'
+import {setGlobalState , useGlobalState} from "../sitelocaton";
 
 function RentHomePage()
 {
+  const changeSiteLocation = () => {
+    setGlobalState("sLocation","newbook");
+  };
     return(
     <>
     <nav className="navbar navbar-expand-lg navbar-light bg-light container-fluid " >
     <Link className="navbar-brand mt-2 mt-lg-0" to="/">
                 <img
-                  src={logo}
+                  src="/images/logo.png"
                   height={30}
                   alt="MDB Logo"
                   loading="lazy"
@@ -32,6 +37,12 @@ function RentHomePage()
           History
         </Link>
       </li>
+      <li className="nav-item">
+        <Link className="nav-link" onClick={changeSiteLocation}>
+        New Books
+        </Link>
+      </li>
+      
     </ul>
     <form className="form-inline my-2 my-lg-0 d-flex justify-content-between">
       <input

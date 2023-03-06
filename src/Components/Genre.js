@@ -1,4 +1,4 @@
-import book from "../photos/book.png";
+
 function Genre()
 {
     return(<> <link
@@ -36,7 +36,7 @@ function Genre()
                     <a href="#">
                       <div className="shop-thumb__img">
                         <img
-                          src={book}
+                          src="/images/book.png"
                           className="img-responsive"
                           height={"250px"}
                           alt="..."
@@ -66,7 +66,7 @@ function Genre()
                     <a href="#">
                       <div className="shop-thumb__img">
                         <img
-                          src={book}
+                          src="/images/book.png"
                           className="img-responsive"
                           height={"250px"}
                           alt="..."
@@ -90,7 +90,7 @@ function Genre()
                     <a href="#">
                       <div className="shop-thumb__img">
                         <img
-                          src={book}
+                          src="/images/book.png"
                           className="img-responsive"
                           height={"250px"}
                           alt="..."
@@ -120,7 +120,7 @@ function Genre()
                     <a href="#">
                       <div className="shop-thumb__img">
                         <img
-                          src={book}
+                          src="/images/book.png"
                           className="img-responsive"
                           height={"250px"}
                           alt="..."
@@ -144,7 +144,7 @@ function Genre()
                     <a href="#">
                       <div className="shop-thumb__img">
                         <img
-                          src={book}
+                          src="/images/book.png"
                           className="img-responsive"
                           height={"250px"}
                           alt="..."
@@ -174,7 +174,7 @@ function Genre()
                     <a href="#">
                       <div className="shop-thumb__img">
                         <img
-                          src={book}
+                          src="/images/book.png"
                           className="img-responsive"
                           height={"250px"}
                           alt="..."
@@ -198,7 +198,7 @@ function Genre()
                     <a href="#">
                       <div className="shop-thumb__img">
                         <img
-                          src={book}
+                          src="/images/book.png"
                           className="img-responsive"
                           height={"250px"}
                           alt="..."
@@ -228,7 +228,7 @@ function Genre()
                     <a href="#">
                       <div className="shop-thumb__img">
                         <img
-                          src={book}
+                          src="/images/book.png"
                           className="img-responsive"
                           height={"250px"}
                           alt="..."
@@ -252,7 +252,7 @@ function Genre()
                     <a href="#">
                       <div className="shop-thumb__img">
                         <img
-                          src={book}
+                          src="/images/book.png"
                           className="img-responsive"
                           height={"250px"}
                           alt="..."

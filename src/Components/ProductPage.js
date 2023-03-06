@@ -1,5 +1,4 @@
 import "./ProductPage.css";
-import book from "../photos/book.png";
 function ProductPage() {
   return (
     <>
@@ -311,7 +310,7 @@ function ProductPage() {
                     <a href="#">
                       <div className="shop-thumb__img">
                         <img
-                          src={book}
+                          src="/images/book.png"
                           className="img-responsive"
                           height={"250px"}
                           alt="..."
@@ -341,7 +340,7 @@ function ProductPage() {
                     <a href="#">
                       <div className="shop-thumb__img">
                         <img
-                          src={book}
+                          src="/images/book.png"
                           className="img-responsive"
                           height={"250px"}
                           alt="..."
@@ -365,7 +364,7 @@ function ProductPage() {
                     <a href="#">
                       <div className="shop-thumb__img">
                         <img
-                          src={book}
+                          src="/images/book.png"
                           className="img-responsive"
                           height={"250px"}
                           alt="..."
@@ -395,7 +394,7 @@ function ProductPage() {
                     <a href="#">
                       <div className="shop-thumb__img">
                         <img
-                          src={book}
+                          src="/images/book.png"
                           className="img-responsive"
                           height={"250px"}
                           alt="..."
@@ -419,7 +418,7 @@ function ProductPage() {
                     <a href="#">
                       <div className="shop-thumb__img">
                         <img
-                          src={book}
+                          src="/images/book.png"
                           className="img-responsive"
                           height={"250px"}
                           alt="..."
@@ -449,7 +448,7 @@ function ProductPage() {
                     <a href="#">
                       <div className="shop-thumb__img">
                         <img
-                          src={book}
+                          src="/images/book.png"
                           className="img-responsive"
                           height={"250px"}
                           alt="..."
@@ -473,7 +472,7 @@ function ProductPage() {
                     <a href="#">
                       <div className="shop-thumb__img">
                         <img
-                          src={book}
+                          src="/images/book.png"
                           className="img-responsive"
                           height={"250px"}
                           alt="..."
@@ -503,7 +502,7 @@ function ProductPage() {
                     <a href="#">
                       <div className="shop-thumb__img">
                         <img
-                          src={book}
+                          src="/images/book.png"
                           className="img-responsive"
                           height={"250px"}
                           alt="..."
@@ -527,7 +526,7 @@ function ProductPage() {
                     <a href="#">
                       <div className="shop-thumb__img">
                         <img
-                          src={book}
+                          src="/images/book.png"
                           className="img-responsive"
                           height={"250px"}
                           alt="..."
