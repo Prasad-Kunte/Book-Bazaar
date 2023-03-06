@@ -11,8 +11,10 @@ import Footer from "./Footer";
 import Homecontent from "./Homecontent";
 import Genre from "./Genre";
 import BookDetails from "./BookDetails";
-import CheckoutPage from "./CheckoutPage";
+
 import Checkout from "./Checkout";
+import ProfilePage from "./ProfilePage";
+import Update from "./Update";
 
 function App() {
   return (
@@ -29,10 +31,11 @@ function App() {
             ></Route>
             <Route path="/Genre" element={<Genre></Genre>}></Route>
             <Route path="/Details" element={<BookDetails />}></Route>
-            <Route
-              path="/CheckoutPage"
-              element={<CheckoutPage></CheckoutPage>}
-            ></Route>
+            <Route path="/ProfilePage" element={<ProfilePage />}></Route>
+            <Route path="/Update" element={<Update/>}></Route>
+           
+           
+            
             <Route path="/Checkout" element={<Checkout></Checkout>}></Route>
           </Routes>
           <Footer></Footer>
