@@ -13,7 +13,7 @@ import Genre from "./Genre";
 import BookDetails from "./BookDetails";
 
 import Checkout from "./Checkout";
-import AboutUs from "./AboutUs";
+
 import About from "./About";
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
             <Route path="/Genre" element={<Genre></Genre>}></Route>
             <Route path="/Details" element={<BookDetails />}></Route>
             <Route path="/Checkout" element={<Checkout></Checkout>}></Route>
-            <Route path="/AboutUs" element={<AboutUs></AboutUs>}></Route>
+
             <Route path="/About" element={<About></About>}></Route>
           </Routes>
           <Footer></Footer>
