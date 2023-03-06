@@ -318,9 +318,9 @@ function Navbar(){
                   aria-labelledby="navbarDropdownMenuAvatar"
                 >
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/ProfilePage">
                       My profile
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">
