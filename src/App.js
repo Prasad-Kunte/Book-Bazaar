@@ -9,6 +9,7 @@ import Checkout from "./Components/Checkout";
 import ContactUs from "./ContactUs";
 import About from "./About";
 import Footer from "./Components/Footer";
+
 function App() {
   return (
     <>
