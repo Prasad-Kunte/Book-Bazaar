@@ -24,7 +24,6 @@ export function App() {
     return(
     <>
     <BrowserRouter>
-    
        <RentHomePage/>
     <Routes>
       <Route path="/" element={<RentContent></RentContent> }></Route>
@@ -108,4 +107,4 @@ export function App() {
       </BrowserRouter>
     </>
   );
-}
+  }
