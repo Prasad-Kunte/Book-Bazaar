@@ -19,6 +19,8 @@ import Update from "./Components/Update";
 import ProfilePage from "./Components/ProfilePage";
 import {setGlobalState , useGlobalState} from "./sitelocaton";
 import About from "./Components/About";
+import ContactUs from "./Components/ContactUs";
+import Signup from "./Components/Signup";
 
 
 function App() {
@@ -46,6 +48,7 @@ function App() {
       ></Route>
       <Route path="/ProfilePage" element={<ProfilePage />}></Route>
       <Route path="/Aboutus" element={<About/>}></Route>
+      <Route path="/ContactUs" element={<ContactUs/>}></Route>
       <Route
         path="/Details"
         element={<BookDetails/>}
@@ -54,6 +57,11 @@ function App() {
     </Routes>
     <Footer></Footer>
     </BrowserRouter></>);
+  }
+  if(location==="rent")
+  {
+    return(<></>);
+   
   }
   else if(location==="newbook"){
   return (
@@ -77,6 +85,8 @@ function App() {
             element={<Genre></Genre>}
           ></Route>
           <Route path="/Aboutus" element={<About/>}></Route>
+          <Route path="/ContactUs" element={<ContactUs/>}></Route>
+          <Route path="/Signup" element={<Signup/>}></Route>
           <Route
             path="/Details"
             element={<BookDetails/>}
