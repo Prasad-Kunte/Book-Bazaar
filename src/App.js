@@ -15,6 +15,7 @@ import BookDetails from "./BookDetails";
 import Checkout from "./Checkout";
 
 import About from "./About";
+import ContactUs from "./ContactUs";
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
             <Route path="/Genre" element={<Genre></Genre>}></Route>
             <Route path="/Details" element={<BookDetails />}></Route>
             <Route path="/Checkout" element={<Checkout></Checkout>}></Route>
-
+            <Route path="/ContactUs" element={<ContactUs></ContactUs>}></Route>
             <Route path="/About" element={<About></About>}></Route>
           </Routes>
           <Footer></Footer>
