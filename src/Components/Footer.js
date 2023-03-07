@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 function Footer(){
     return(<>
         {/* Footer */}
@@ -49,30 +50,7 @@ function Footer(){
                 </div>
                 {/* Grid column */}
                 {/* Grid column */}
-                <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                  {/* Links */}
-                  <h6 className="text-uppercase fw-bold mb-4">P</h6>
-                  <p>
-                    <a href="#!" className="text-reset">
-                      A
-                    </a>
-                  </p>
-                  <p>
-                    <a href="#!" className="text-reset">
-                      React
-                    </a>
-                  </p>
-                  <p>
-                    <a href="#!" className="text-reset">
-                      V
-                    </a>
-                  </p>
-                  <p>
-                    <a href="#!" className="text-reset">
-                      L
-                    </a>
-                  </p>
-                </div>
+                
                 {/* Grid column */}
                 {/* Grid column */}
                 <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -88,6 +66,11 @@ function Footer(){
                     <a href="#!" className="text-reset">
                       Help
                     </a>
+                  </p>
+                  <p>
+                    <Link to="/Aboutus" className="text-reset">
+                      About Us
+                    </Link>
                   </p>
                 </div>
                 {/* Grid column */}

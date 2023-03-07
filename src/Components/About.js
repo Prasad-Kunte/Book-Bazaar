@@ -1,9 +1,4 @@
 import "./About.css";
-import Ashish from "./images/Ashish.jpg";
-import Prasad from "./images/Prasad.jpg";
-import Sachin from "./images/Sachin.jpg";
-import Prashant from "./images/Prashant.jpg";
-import Pratik from "./images/Pratik.jpg";
 function About() {
   return (
     <>
@@ -37,7 +32,7 @@ function About() {
                 <br></br>
                 can negotiate with the seller. Customers can create an account,
                 manage their rental and purchase history, <br></br>and use
-                contact form to ask questions and provide feedback.
+                contact form to ask questions and provide feedback.
               </h5>
             </div>
           </p>
@@ -79,7 +74,7 @@ function About() {
                 }}
               >
                 <div className="advisor_thumb">
-                  <img src={Prasad} alt="" />
+                  <img src="/images/Prasad.jpg" alt="" />
 
                   <div className="social-info">
                     <a href="#">
@@ -113,7 +108,7 @@ function About() {
               >
                 {/* Team Thumb*/}
                 <div className="advisor_thumb">
-                  <img src={Ashish} alt="" />
+                  <img src="/images/Ashish.jpg" alt="" />
                   {/* Social Info*/}
                   <div className="social-info">
                     <a href="#">
@@ -147,7 +142,7 @@ function About() {
               >
                 {/* Team Thumb*/}
                 <div className="advisor_thumb">
-                  <img src={Sachin} alt="" />
+                  <img src="/images/Sachin.jpg" alt="" />
                   {/* Social Info*/}
                   <div className="social-info">
                     <a href="#">
@@ -181,7 +176,7 @@ function About() {
               >
                 {/* Team Thumb*/}
                 <div className="advisor_thumb">
-                  <img src={Pratik} alt="" />
+                  <img src="/images/Pratik.jpg" alt="" />
                   {/* Social Info*/}
                   <div className="social-info">
                     <a href="#">
@@ -214,7 +209,7 @@ function About() {
               >
                 {/* Team Thumb*/}
                 <div className="advisor_thumb">
-                  <img src={Prashant} alt="" />
+                  <img src="/images/Prashant.jpg" alt="" />
                   {/* Social Info*/}
                   <div className="social-info">
                     <a href="#">
