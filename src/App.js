@@ -21,6 +21,7 @@ import {setGlobalState , useGlobalState} from "./sitelocaton";
 import About from "./Components/About";
 import ContactUs from "./Components/ContactUs";
 import Signup from "./Components/Signup";
+import Login from "./Components/Login";
 
 
 function App() {
@@ -49,6 +50,10 @@ function App() {
       <Route path="/ProfilePage" element={<ProfilePage />}></Route>
       <Route path="/Aboutus" element={<About/>}></Route>
       <Route path="/ContactUs" element={<ContactUs/>}></Route>
+      
+      <Route path="/Signin" element={<Login/>}></Route>
+      
+      <Route path="/Signup" element={<Signup/>}></Route>
       <Route
         path="/Details"
         element={<BookDetails/>}
@@ -87,6 +92,8 @@ function App() {
           <Route path="/Aboutus" element={<About/>}></Route>
           <Route path="/ContactUs" element={<ContactUs/>}></Route>
           <Route path="/Signup" element={<Signup/>}></Route>
+          
+          <Route path="/Signin" element={<Login/>}></Route>
           <Route
             path="/Details"
             element={<BookDetails/>}
