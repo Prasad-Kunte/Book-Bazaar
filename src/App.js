@@ -10,101 +10,68 @@ import About from "./About";
 import Footer from "./Components/Footer";
 import Update from "./Components/Update";
 import ProfilePage from "./Components/ProfilePage";
-import {setGlobalState , useGlobalState} from "./sitelocaton";
+import { setGlobalState, useGlobalState } from "./sitelocaton";
 import ContactUs from "./Components/ContactUs";
 import Signup from "./Components/Signup";
+import RentContent from "./Components/RentContent";
+import RentHomePage from "./Components/RentHomePage";
+import Chat from "./Components/Chat";
 
-export function App() {
+function App() {
   window.onload = (event) => {
-   setGlobalState("sLocation",location);
+    setGlobalState("sLocation", location);
   };
-  const [location]=useGlobalState("sLocation");
-  if(location==="rent")
-  {
-    return(
-    <>
-    <BrowserRouter>
-       <RentHomePage/>
-    <Routes>
-      <Route path="/" element={<RentContent></RentContent> }></Route>
-      <Route
-        path="/ProductPage"
-        element={<ProductPage></ProductPage>}
-      ></Route>
-      <Route
-        path="/Genre"
-        element={<Genre></Genre>}
-      ></Route>
-      <Route path="/ProfilePage" element={<ProfilePage />}></Route>
-      <Route path="/Aboutus" element={<About/>}></Route>
-      <Route path="/ContactUs" element={<ContactUs/>}></Route>
-      <Route
-        path="/Details"
-        element={<BookDetails/>}
-      ></Route>
-      <Route path="/Checkout" element={<Checkout></Checkout>}></Route>
-    </Routes>
-    <Footer></Footer>
-    </BrowserRouter>
-    </>);
-  }
-  if(location==="rent")
-  {
-    return(<></>);
-   
-  }
-  else if(location==="newbook"){
-
-  return (
-    <>
-      
+  const [location] = useGlobalState("sLocation");
+  if (location === "rent") {
+    return (
+      <>
         <BrowserRouter>
-          <Navbar></Navbar>
+          <RentHomePage />
           <Routes>
-            <Route path="/" element={<Homecontent />}></Route>
+            <Route path="/" element={<RentContent></RentContent>}></Route>
             <Route
               path="/ProductPage"
               element={<ProductPage></ProductPage>}
             ></Route>
             <Route path="/Genre" element={<Genre></Genre>}></Route>
+            <Route path="/ProfilePage" element={<ProfilePage />}></Route>
+            <Route path="/Aboutus" element={<About />}></Route>
             <Route path="/Details" element={<BookDetails />}></Route>
             <Route path="/Checkout" element={<Checkout></Checkout>}></Route>
-            <Route path="/ContactUs" element={<ContactUs></ContactUs>}></Route>
-            <Route path="/About" element={<About></About>}></Route>
+            <Route path="/Chat" element={<Chat></Chat>}></Route>
           </Routes>
           <Footer></Footer>
         </BrowserRouter>
-      
+      </>
+    );
+  } else if (location === "newbook") {
+    return (
+      <>
+        <>
+          <BrowserRouter>
+            <Navbar></Navbar>
 
-      <BrowserRouter>
-        <Navbar></Navbar>
-        
+            <Routes>
+              <Route path="/" element={<Homecontent />}></Route>
+              <Route
+                path="/ProductPage"
+                element={<ProductPage></ProductPage>}
+              ></Route>
+              <Route path="/ProfilePage" element={<ProfilePage />}></Route>
 
-        <Routes>
-          <Route path="/" element={<Homecontent/> }></Route>
-          <Route
-            path="/ProductPage"
-            element={<ProductPage></ProductPage>}
-          ></Route>
-          <Route path="/ProfilePage" element={<ProfilePage />}></Route>
-          
-            <Route path="/Update" element={<Update/>}></Route>
-          <Route
-            path="/Genre"
-            element={<Genre></Genre>}
-          ></Route>
-          <Route path="/Aboutus" element={<About/>}></Route>
-          <Route path="/ContactUs" element={<ContactUs/>}></Route>
-          <Route path="/Signup" element={<Signup/>}></Route>
-          <Route
-            path="/Details"
-            element={<BookDetails/>}
-          ></Route>
-          <Route path="/Checkout" element={<Checkout></Checkout>}></Route>
-        </Routes>
-        <Footer></Footer>
-        
-      </BrowserRouter>
-    </>
-  );
+              <Route path="/Update" element={<Update />}></Route>
+              <Route path="/Genre" element={<Genre></Genre>}></Route>
+              <Route path="/Aboutus" element={<About />}></Route>
+              <Route path="/Details" element={<BookDetails />}></Route>
+              <Route path="/Checkout" element={<Checkout></Checkout>}></Route>
+              <Route path="/Chat" element={<Chat></Chat>}></Route>
+            </Routes>
+            <Footer></Footer>
+          </BrowserRouter>
+        </>
+      </>
+    );
   }
+}
+
+export default App;
