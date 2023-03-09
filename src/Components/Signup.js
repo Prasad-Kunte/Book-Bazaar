@@ -1,5 +1,6 @@
 import axios from 'axios';
 import {Link} from 'react-router-dom'
+import $ from 'jquery';
 function Signup()
 {
   let url="https://docs.openaq.org/india";
@@ -7,6 +8,59 @@ function Signup()
     var res=await axios.get(url);
     console.log(res.data);
   }
+function Register(event){
+	
+
+
+        
+  var User = {}
+  User["fname"] = $("#fname").val();
+  User["lname"] = $("#lname").val();
+  User["email"] = $("#email").val();
+  User["mobno"] = $("#mobno").val();
+  User["state"] = $("#state").val();
+  User["city"] = $("#city").val();
+  User["pincode"] = $("#pincode").val();
+  User["password"] = $("#password").val();
+  User["Address"] = $("#Address").val();
+  User["role"] = $("#role").val();
+       console.log(User);
+
+       $("#bth_submit").prop("disabled", true);
+
+       $.ajax({
+           type: "POST",
+           contentType: "application/json",
+           url: "http://localhost:8080/userss",
+           data: JSON.stringify(User),
+           dataType: 'json',
+           cache: false,
+           timeout: 600000,
+           success: function (data) {
+
+             
+             
+
+           },
+           error: function (e) {
+               
+           }
+       });
+      //  fetch("http://localhost:8080/userss", {
+      //   method: 'POST',
+      //   body: JSON.stringify(User),
+      //   headers: {
+      //     'Content-Type': 'application/json'
+      //   }
+      // })
+      // .then(response => response.json())
+      // .then(data => console.log(data))
+      // .catch(error => console.error(error));
+       
+       
+   
+ 
+}
     
     return(<><section className="h-100 bg-dark">
     <form action=""><div className="container py-5 h-100">
@@ -37,10 +91,10 @@ function Signup()
                       <div className="form-outline">
                         <input
                           type="text"
-                          id="form3Example1m"
+                          id="fname"
                           className="form-control form-control-lg"
                         />
-                        <label className="form-label" htmlFor="form3Example1m">
+                        <label className="form-label" htmlFor="fname">
                           First name
                         </label>
                       </div>
@@ -49,10 +103,10 @@ function Signup()
                       <div className="form-outline">
                         <input
                           type="text"
-                          id="form3Example1n"
+                          id="lname"
                           className="form-control form-control-lg"
                         />
-                        <label className="form-label" htmlFor="form3Example1n">
+                        <label className="form-label" htmlFor="lname">
                           Last name
                         </label>
                       </div>
@@ -63,10 +117,10 @@ function Signup()
                       <div className="form-outline">
                         <input
                           type="text"
-                          id="form3Example1m1"
+                          id="email"
                           className="form-control form-control-lg"
                         />
-                        <label className="form-label" htmlFor="form3Example1m1">
+                        <label className="form-label" htmlFor="email">
                           Email Id
                         </label>
                       </div>
@@ -75,10 +129,10 @@ function Signup()
                       <div className="form-outline">
                         <input
                           type="text"
-                          id="form3Example1n1"
+                          id="mobno"
                           className="form-control form-control-lg"
                         />
-                        <label className="form-label" htmlFor="form3Example1n1">
+                        <label className="form-label" htmlFor="mobno">
                           Mobile Number
                         </label>
                       </div>
@@ -87,10 +141,10 @@ function Signup()
                   <div className="form-outline mb-4">
                     <input
                       type="text"
-                      id="form3Example8"
+                      id="Address"
                       className="form-control form-control-lg"
                     />
-                    <label className="form-label" htmlFor="form3Example8">
+                    <label className="form-label" htmlFor="Address">
                       Address
                     </label>
                   </div>
@@ -99,7 +153,7 @@ function Signup()
                     
                   <div className="row">
                     <div className="col-md-6 mb-4">
-                      <select className="select">
+                      <select className="select" id="state">
                         <option value="Andhra Pradesh">Andhra Pradesh</option>
                         <option value="Uttar Pradesh">Uttar Pradesh</option>
                         <option value="Punjab">Punjab</option>
@@ -109,7 +163,7 @@ function Signup()
                       </select>
                     </div>
                     <div className="col-md-6 mb-4">
-                      <select className="select">
+                      <select className="select" id="city">
                         <option value="mumbai">mumbai</option>
                         <option value="pune">pune</option>
                         <option value="sangli">sangli</option>
@@ -129,7 +183,7 @@ function Signup()
                   <div className="form-outline mb-4">
                     <input
                       type="text"
-                      id="form3Example90"
+                      id="pincode"
                       className="form-control form-control-lg"
                     />
                     <label className="form-label" htmlFor="form3Example90">
@@ -139,10 +193,10 @@ function Signup()
                   <div className="form-outline mb-4">
                     <input
                       type="Password"
-                      id="form3Example99"
+                      id="password"
                       className="form-control form-control-lg"
                     />
-                    <label className="form-label" htmlFor="form3Example99">
+                    <label className="form-label" htmlFor="password">
                       Password
                     </label>
                   </div>
@@ -160,7 +214,7 @@ function Signup()
                     <button type="button" className="btn btn-light btn-lg">
                       Reset all
                     </button>
-                    <button type="button" className="btn btn-warning btn-lg ms-2" onClick={getdata}>
+                    <button type="button" id="bth_submit" className="btn btn-warning btn-lg ms-2" onClick={Register}>
                       Submit form
                     </button>
                   </div>
