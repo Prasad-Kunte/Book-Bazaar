@@ -256,9 +256,9 @@ function Navbar(){
             {/* Right elements */}
             <div className="d-flex align-items-center">
               {/* Icon */}
-              <a className="text-reset me-3" href="#">
+              <Link className="text-reset me-3" to="Cart">
                 <i className="fas fa-shopping-cart" />
-              </a>
+              </Link>
               {/* Notifications */}
               <div className="dropdown">
                 <a
@@ -341,6 +341,7 @@ function Navbar(){
         </nav>
         
         {/* Navbar */}
+        
         </div>
       
       </>);
