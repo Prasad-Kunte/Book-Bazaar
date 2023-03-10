@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import Famous from './Famous';
+import axios from 'axios';
 function Homecontent()
 {
+ 
     return(<>
  <>
   {/* Carousel wrapper */}

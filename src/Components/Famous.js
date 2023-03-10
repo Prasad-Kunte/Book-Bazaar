@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
+import axios from 'axios';
 function Famous()
 {
+  let url="https://docs.openaq.org/india";
+  const getdata=async() =>{
+    var res=await axios.get(url);
+    console.log(res.data);
+  }
   var array1 = [
     {
       "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ-3TsNoOhIfPdDAuBra8JeU0W8YT3uZDJS3oVZIjjvcj0tk-Ob",
