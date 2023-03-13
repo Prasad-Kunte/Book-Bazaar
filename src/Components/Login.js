@@ -52,14 +52,6 @@ function Login() {
       }
     }, 1000);
   };
-  const reset = () => {
-    setFormData({
-      ...formdata,
-      isSubmit: false,
-      EmailId: "",
-      Password: "",
-    });
-  };
 
   const onChange = (e) => {
     setFormData({

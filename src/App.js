@@ -19,6 +19,8 @@ import About from "./Components/About";
 import ContactUs from "./Components/ContactUs";
 import Signup from "./Components/Signup";
 import Login from "./Components/Login";
+import Chat from "./Components/Chat";
+import Invoice from "./Components/Invoice";
 
 function App() {
   window.onload = (event) => {
@@ -46,6 +48,8 @@ function App() {
             <Route path="/Signup" element={<Signup />}></Route>
             <Route path="/Details" element={<BookDetails />}></Route>
             <Route path="/Checkout" element={<Checkout></Checkout>}></Route>
+            <Route path="/Chat" element={<Chat></Chat>}></Route>
+            <Route path="/Invoice" element={<Invoice></Invoice>}></Route>
           </Routes>
           <Footer></Footer>
         </BrowserRouter>
@@ -78,6 +82,8 @@ function App() {
               <Route path="/Signin" element={<Login />}></Route>
               <Route path="/Details" element={<BookDetails />}></Route>
               <Route path="/Checkout" element={<Checkout></Checkout>}></Route>
+              <Route path="/Chat" element={<Chat></Chat>}></Route>
+              <Route path="/Invoice" element={<Invoice></Invoice>}></Route>
             </Routes>
             <Footer></Footer>
           </BrowserRouter>

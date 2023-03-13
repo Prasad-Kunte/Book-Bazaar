@@ -95,7 +95,7 @@ function Signup() {
 
   const formValidation = () => {
     let error = false;
-    if (FirstName === "" || !/^[A-Za-z]{2,}$/.test(FirstName)) {
+    if (FirstName === "" || !/^[A-Za-z]{3,}$/.test(FirstName)) {
       //console.log("inside fullname");
       error = {
         field_id: "FirstName",
@@ -104,7 +104,7 @@ function Signup() {
       return error;
     }
 
-    if (LastName === "" || !/^[A-Za-z]{2,}$/.test(LastName)) {
+    if (LastName === "" || !/^[A-Za-z]{3,}$/.test(LastName)) {
       //console.log("inside fullname");
       error = {
         field_id: "LastName",
