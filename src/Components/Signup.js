@@ -1,7 +1,13 @@
+
+
 import axios from "axios";
 import { useState } from "react";
+import $ from 'jquery';
 import { Link, useNavigate } from "react-router-dom";
 function Signup() {
+  var state;
+  var city;
+  var flag=false;
   const initialstate = {
     isSubmit: false,
     FirstName: "",
@@ -37,6 +43,7 @@ function Signup() {
     });
     setTimeout(() => {
       let error = formValidation();
+
       if (error) {
         setFormDataErr(error);
         setFormData({
@@ -45,6 +52,37 @@ function Signup() {
         });
         return;
       } else {
+        var user = {}
+    
+    user["fname"] = $("#form3Example1m").val();
+    user["lname"] = $("#form3Example1n").val();
+    user["email"] = $("#form3Example1m1").val();
+    user["mobno"] = $("#form3Example1n1").val();
+    user["state"] = state;
+    user["city"] =city;
+    user["pincode"] = $("#form3Example90").val();
+    user["password"] = $("#form3Example99").val();
+    user["Address"] = $("#form3Example8").val();
+    user["role"] = $("#role").val();
+
+    $.ajax({
+      type: "POST",
+      contentType: "application/json",
+      url: "http://localhost:8080/userss",
+      data: JSON.stringify(user),
+      dataType: 'json',
+      cache: false,
+      timeout: 600000,
+      success: function (data) {
+
+        
+        
+
+      },
+      error: function (e) {
+          
+      }
+  });
         alert("Registered successfully. Kindly Login");
         setTimeout(() => {
           //backend api
@@ -92,6 +130,25 @@ function Signup() {
       [e.target.name]: e.target.value,
     });
   };
+  const onChangePincode = (e) => {
+    setFormData({
+      ...formdata,
+      [e.target.name]: e.target.value,
+    });
+   
+    let url = "https://api.postalpincode.in/pincode/"+e.target.value;
+    const getdata = async () => {
+      var res = await axios.get(url);
+      console.log(res.data[0].PostOffice[0]);
+      document.getElementById("city").innerHTML = res.data[0].PostOffice[0].Block;
+      city=res.data[0].PostOffice[0].Block;
+      document.getElementById("state").innerHTML=res.data[0].PostOffice[0].State;
+      state=res.data[0].PostOffice[0].State;
+    };
+    getdata();
+  
+  };
+  
 
   const formValidation = () => {
     let error = false;
@@ -165,14 +222,10 @@ function Signup() {
       };
       return error;
     }
+   
   };
 
-  // let url = "https://docs.openaq.org/india";
-  // const getdata = async () => {
-  //   var res = await axios.get(url);
-  //   console.log(res.data);
-  // };
-
+ 
   return (
     <>
       <section className="h-100 bg-dark">
@@ -320,6 +373,22 @@ function Signup() {
                             Address
                           </label>
                         </div>
+                        <div className="form-outline mb-4">
+                          <input
+                            type="text"
+                            id="form3Example90"
+                            name="Pincode"
+                            value={Pincode}
+                            onChange={onChangePincode}
+                            className="form-control form-control-lg border border-success"
+                          />
+                          <label
+                            className="form-label"
+                            htmlFor="form3Example90"
+                          >
+                            Pincode
+                          </label>
+                        </div>
                         <div>
                           {formdataErr && formdataErr.field_id === "Address" ? (
                             <p style={{ color: "red" }}>
@@ -329,29 +398,13 @@ function Signup() {
                         </div>
                         <div className="row">
                           <div className="col-md-6 mb-4">
-                            <lable>State</lable>
+                            <lable htmlFor="state">State</lable>
 
-                            <select className="select border border-success w-100">
-                              <option value="Andhra Pradesh">
-                                Andhra Pradesh
-                              </option>
-                              <option value="Uttar Pradesh">
-                                Uttar Pradesh
-                              </option>
-                              <option value="Punjab">Punjab</option>
-                              <option value="Bihar">Bihar</option>
-                              <option value="Tamil Nadu">Tamil Nadu</option>
-                              <option value="Maharashtra">Maharashtra</option>
-                            </select>
+                            <h3 id="state"></h3>
                           </div>
                           <div className="col-md-6 mb-4">
-                            <lable>City</lable>
-                            <select className="select border border-success w-100">
-                              <option value="mumbai">mumbai</option>
-                              <option value="pune">pune</option>
-                              <option value="sangli">sangli</option>
-                              <option value="latur">latur</option>
-                            </select>
+                            <lable htmlFor="city">City</lable>
+                            <h2 id="city"></h2>
                           </div>
                         </div>
                         <div className="col-md-6 mb-4">
@@ -369,22 +422,7 @@ function Signup() {
                             <option value="Seller">Seller</option>
                           </select>
                         </div>
-                        <div className="form-outline mb-4">
-                          <input
-                            type="text"
-                            id="form3Example90"
-                            name="Pincode"
-                            value={Pincode}
-                            onChange={onChange}
-                            className="form-control form-control-lg border border-success"
-                          />
-                          <label
-                            className="form-label"
-                            htmlFor="form3Example90"
-                          >
-                            Pincode
-                          </label>
-                        </div>
+                        
                         <div>
                           {formdataErr && formdataErr.field_id === "Pincode" ? (
                             <p style={{ color: "red" }}>
@@ -452,22 +490,23 @@ function Signup() {
                           <button
                             type="submit"
                             className="btn btn-success btn-lg ms-2"
-                            // {  onClick={getdata}}
+                             
                           >
                             Register
                           </button>
                         </div>
                       </div>
                       <div className="text-center">
-                        <button className="btn btn-warning w-50">
-                          <Link className="text-light" to="/Signin">
+                      <Link className="text-light" to="/Signin"><button className="btn btn-warning w-50">
+                          
                             login
-                          </Link>
-                        </button>
+                          
+                        </button></Link>
                       </div>
                     </div>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>

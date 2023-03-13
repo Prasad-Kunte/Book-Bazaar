@@ -19,8 +19,12 @@ import About from "./Components/About";
 import ContactUs from "./Components/ContactUs";
 import Signup from "./Components/Signup";
 import Login from "./Components/Login";
+<<<<<<< HEAD
 import Chat from "./Components/Chat";
 import Invoice from "./Components/Invoice";
+=======
+import Cart from "./Components/Cart";
+>>>>>>> 25ea328af34880e0e672de806af563f449f1b6ae
 
 function App() {
   window.onload = (event) => {
@@ -48,8 +52,12 @@ function App() {
             <Route path="/Signup" element={<Signup />}></Route>
             <Route path="/Details" element={<BookDetails />}></Route>
             <Route path="/Checkout" element={<Checkout></Checkout>}></Route>
+<<<<<<< HEAD
             <Route path="/Chat" element={<Chat></Chat>}></Route>
             <Route path="/Invoice" element={<Invoice></Invoice>}></Route>
+=======
+            <Route path="/Cart" element={<Cart></Cart>}></Route>
+>>>>>>> 25ea328af34880e0e672de806af563f449f1b6ae
           </Routes>
           <Footer></Footer>
         </BrowserRouter>
@@ -64,7 +72,7 @@ function App() {
         <>
           <BrowserRouter>
             <Navbar></Navbar>
-
+            {/* <LoginSignUp/> */}
             <Routes>
               <Route path="/" element={<Homecontent />}></Route>
               <Route
@@ -77,16 +85,21 @@ function App() {
               <Route path="/Genre" element={<Genre></Genre>}></Route>
               <Route path="/Aboutus" element={<About />}></Route>
               <Route path="/ContactUs" element={<ContactUs />}></Route>
-              <Route path="/Signup" element={<Signup />}></Route>
+              <Route path="/Signup" element={<Signup/>}></Route>
 
               <Route path="/Signin" element={<Login />}></Route>
               <Route path="/Details" element={<BookDetails />}></Route>
               <Route path="/Checkout" element={<Checkout></Checkout>}></Route>
+<<<<<<< HEAD
               <Route path="/Chat" element={<Chat></Chat>}></Route>
               <Route path="/Invoice" element={<Invoice></Invoice>}></Route>
+=======
+              <Route path="/Cart" element={<Cart/>}></Route>
+>>>>>>> 25ea328af34880e0e672de806af563f449f1b6ae
             </Routes>
             <Footer></Footer>
           </BrowserRouter>
+         
         </>
       </>
     );
