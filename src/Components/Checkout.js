@@ -1,5 +1,3 @@
-
-
 function Checkout() {
   return (
     <section className="bg-light py-2">
