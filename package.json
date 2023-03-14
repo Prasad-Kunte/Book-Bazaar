@@ -12,9 +12,11 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.3.4",
     "bootstrap": "^5.2.3",
+    "fs": "^0.0.1-security",
     "jquery": "^3.6.3",
     "mdb-ui-kit": "^6.1.0",
     "react": "^18.2.0",
+    "react-client-session": "^0.0.8",
     "react-dom": "^18.2.0",
     "react-hooks-global-state": "^2.1.0",
     "react-router-dom": "^6.8.1",
@@ -44,5 +46,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "browser": {
+    "fs": false,
+    "os": false,
+    "path": false
   }
 }

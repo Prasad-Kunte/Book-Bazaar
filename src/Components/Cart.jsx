@@ -1,5 +1,13 @@
 import "./Cart.css";
+import { useEffect } from "react";
 function Cart(){
+  useEffect(() => {
+    
+    window.scrollTo(0, 0);
+  
+  
+  }, []);
+  
     return(<><section className="h-100 gradient-custom">
     <div className="container py-5">
       <div className="row d-flex justify-content-center my-4">

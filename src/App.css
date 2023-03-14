@@ -33,7 +33,7 @@ ul:hover li a
 ul:hover li  a:not(:hover)
 {
 	color: rgba(33, 33, 33, 0.96);
-	filter:blur(0.7px);
+	
 }
 
 
