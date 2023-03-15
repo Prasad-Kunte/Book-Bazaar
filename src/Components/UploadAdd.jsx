@@ -16,19 +16,19 @@ function UploadAdd()
     {
         console.log($("#Auther").val());
         var Book = {}
-    Book["book_title"] = $("#title").val();
+    Book["booktitle"] = $("#title").val();
     Book["auther"]={}
     Book["auther"]["id"] = parseInt($("#Auther").val());
-    Book["book_genre"] = $("#genre").val();
-    Book["book_language"] = $("#language").val();
-    Book["book_desc"] = $("#desc").val();
-    Book["book_type"] = $("#type").val();
-    Book["book_MRP"] = $("#MRP").val();
-    Book["book_price"] =$("#price").val();
-    Book["book_locality"] = $("#locality").val();
+    Book["bookgenre"] = $("#genre").val();
+    Book["booklanguage"] = $("#language").val();
+    Book["bookdesc"] = $("#desc").val();
+    Book["booktype"] = $("#type").val();
+    Book["bookMRP"] = $("#MRP").val();
+    Book["bookprice"] =$("#price").val();
+    Book["booklocality"] = $("#locality").val();
     Book["user"]={};
     Book["user"]["userId"] = ReactSession.get("userId");
-    Book["book_img"]=base64Image;
+    Book["bookimg"]=base64Image;
 
     $.ajax({
       type: "POST",
@@ -248,14 +248,7 @@ function UploadAdd()
                   >
                     Add Auther
                   </button>
-                  <button
-                    type="button"
-                    id="submit"
-                    name="submit"
-                    className="btn btn-secondary"
-                  >
-                    Cancel
-                  </button>
+                  
                   <button
                     type="button"
                     id="submit"
