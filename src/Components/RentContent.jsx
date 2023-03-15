@@ -28,7 +28,7 @@ function RentContent()
     //   ;});
   
     },[])
-    const addToHorrorCard =ReactSession.get("oldbooks").map((card) =>(card.booktype=="rent" || card.booktype == "resale")?(<div className="col-sm-3">
+    const addToHorrorCard =ReactSession.get("oldbooks").map((card) =>(card.booktype=="rent" )?(<div className="col-sm-3">
     <div
       className="card shadow-lg p-3 mb-5 bg-white rounded "
       style={{ width: "18rem" }}

@@ -50,22 +50,7 @@ function RentHomePage()
                 />
               </Link>
               </div><div><form className="d-flex input-group w-auto">
-        <input
-          type="search"
-          className="form-control "
-          placeholder="search for books"
-          aria-label="Search"
-          style={{maxHeight: "5vh", minHeight: "5vh"}}
-        />
-        <Link to="ProductPage">
-        <button
-          className="btn btn-outline-primary"
-          type="button"
-          data-mdb-ripple-color="dark"
-          style={{maxHeight: "5vh", minHeight: "5vh"}}
-        >
-          Search
-        </button></Link>
+       
       </form></div>
       </div>
   <input type="checkbox" id="click" />
