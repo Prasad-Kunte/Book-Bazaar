@@ -172,7 +172,7 @@ function Navbar(){
                   </li>{(ReactSession.get("role")== "Admin")?(
                   <li>
                     <Link className="dropdown-item" to="/Admin">
-                      Settings
+                      manage users
                     </Link>
                   </li>):(<></>)}
                   <li>
@@ -210,7 +210,7 @@ function Navbar(){
                   </li>{(ReactSession.get("role")== "Admin")?(
                   <li>
                     <Link className="dropdown-item" to="/Admin">
-                      Settings
+                      manage users
                     </Link>
                   </li>):(<></>)}
                   <li>

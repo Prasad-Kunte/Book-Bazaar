@@ -41,6 +41,13 @@ useEffect(() =>{
    >
      <Link onClick={()=>{
     ReactSession.set("search",card.book_Id);
+    const getdata = async () => {
+      ReactSession.set("onebook", (await axios.get("http://localhost:8080/Books/"+ReactSession.get("search"))).data);
+      console.log(ReactSession.get("onebook"));
+      
+    };
+  
+    getdata();
     window.location.replace("/Details");
     
    }} >
