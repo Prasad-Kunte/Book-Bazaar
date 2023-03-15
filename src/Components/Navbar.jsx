@@ -112,9 +112,7 @@ function Navbar(){
                 </li>
                 <li >
     
-    <Link  to="OrdersHistory">
-          Order History
-        </Link>
+   
               
     </li>
     <li>

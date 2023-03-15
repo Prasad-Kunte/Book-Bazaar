@@ -124,10 +124,9 @@ function Genre()
                 </li>
               </ul>
               <div className=" row">
-    <div className="col-4" id="crudromance">
       {addToFinanceCard}
 </div>
-</div>
+
                 </div></div></div>
       </div></>);
 }

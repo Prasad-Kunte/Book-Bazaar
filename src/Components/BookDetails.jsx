@@ -1,5 +1,6 @@
 import "./BookDe.css"
 import {Link} from 'react-router-dom'
+import $ from 'jquery';
 import axios from 'axios';
 import { useEffect } from "react";
 import { ReactSession } from 'react-client-session';
@@ -50,12 +51,39 @@ function BookDetails()
          
            
             <div className="action">
-              <button className="add-to-cart btn btn-default" type="button">
+              <button className="add-to-cart btn btn-default" type="button"
+              onClick={()=>{
+                var cart = {}
+                cart["book"]={}
+                cart["book"]["book_Id"] = ReactSession.get("onebook").book_Id;
+                cart["user"]={}
+                cart["user"]["userId"] = ReactSession.get("userId");
+                
+            
+                $.ajax({
+                  type: "POST",
+                  contentType: "application/json",
+                  url: "http://localhost:8080/cart",
+                  data: JSON.stringify(cart),
+                  dataType: 'json',
+                  cache: false,
+                  timeout: 600000,
+                  success: function (data) {
+            
+                    console.log("huva");
+                    
+            
+                  },
+                  error: function (e) {
+                    console.log("nahi huva");
+                  }
+              });
+        
+        
+               }}>
                 add to cart
               </button>
-              <Link to="/Checkout"><button className="add-to-cart btn btn-default" type="button">
-                Buy Now
-              </button></Link>
+              
               
             </div>
           </div>

@@ -8,6 +8,7 @@ function Invoice() {
   const generatePDF = useReactToPrint({
     content: () => componentPDF.current,
     documentTitle: "Invoice",
+    
     //onAfterPrint: () => alert("pdf"),
   });
 

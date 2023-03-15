@@ -90,19 +90,16 @@ function ProductPage() {
         <div className="container">
           <div className="row">
             
-            <div className="col-sm-8 col-md-9">
+            
               {/* Filters */}
               
-              <div className="container-fluid">
-              <div className="d-flex flex-row flex-nowrap">
-                
-                {addToFinanceCard}
-                 
-              </div></div>{" "}
+              <div className=" row">
+      {addToFinanceCard}
+</div>{" "}
               {/* / .row */}
               {/* Pagination */}
               <div className="row">
-               </div>
+               
               {/* / .row */}
             </div>{" "}
             {/* / .col-sm-8 */}
