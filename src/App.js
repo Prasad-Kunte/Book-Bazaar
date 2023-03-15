@@ -24,7 +24,6 @@ import Order from "./Components/Order";
 import Orders from "./Components/Orders";
 import { useEffect } from "react";
 import Chat from "./Components/Chat";
-import VendorPanel from "./Components/VendorPanel";
 import UploadAdd from "./Components/UploadAdd";
 import AddAuther from "./Components/AddAuther";
 import Invoice from "./Components/Invoice";
@@ -57,6 +56,8 @@ function App() {
             <Route path="/Checkout" element={<Checkout></Checkout>}></Route>
             <Route path="/Cart" element={<Cart></Cart>}></Route>
             <Route path="/addAdd" element={<Add/>}></Route>
+            <Route path="/addBook" element={<UploadAdd/>}></Route>
+              <Route path="/addAuther" element={<AddAuther/>}></Route>
           </Routes>
           <Footer></Footer>
         </BrowserRouter>
@@ -91,8 +92,6 @@ function App() {
               <Route path="/Details" element={<BookDetails />}></Route>
               <Route path="/Checkout" element={<Checkout></Checkout>}></Route>
               <Route path="/Cart" element={<Cart/>}></Route>
-              <Route path="/addBook" element={<UploadAdd/>}></Route>
-              <Route path="/addAuther" element={<AddAuther/>}></Route>
               <Route path="/invoice" element={<Invoice/>}></Route>
             </Routes>
             <Footer></Footer>
@@ -131,6 +130,8 @@ function App() {
               <Route path="/Details" element={<BookDetails />}></Route>
               <Route path="/Checkout" element={<Checkout></Checkout>}></Route>
               <Route path="/Cart" element={<Cart/>}></Route>
+              <Route path="/addBook" element={<UploadAdd/>}></Route>
+              <Route path="/addAuther" element={<AddAuther/>}></Route>
               <Route path="/invoice" element={<Invoice/>}></Route>
             </Routes>
             <Footer></Footer>

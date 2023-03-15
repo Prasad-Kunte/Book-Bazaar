@@ -83,14 +83,7 @@ function AddAuther()
                   >
                     Upload Book 
                   </button>
-                  <button
-                    type="button"
-                    id="submit"
-                    name="submit"
-                    className="btn btn-secondary"
-                  >
-                    Cancel
-                  </button>
+                  
                   <button
                     type="button"
                     id="submit"

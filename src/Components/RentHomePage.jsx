@@ -87,7 +87,7 @@ function RentHomePage()
         </Link>
                 </li>
     <li>
-    <Link  to="myAdd">
+    <Link  to="addBook">
           myAdd
         </Link>
     </li>

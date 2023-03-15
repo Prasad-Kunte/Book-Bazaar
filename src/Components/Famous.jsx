@@ -34,7 +34,7 @@ useEffect(() =>{
 
   },[])
   
-   const addToFictionCard =ReactSession.get("books").map((card) =>(card.book_genre=="Fiction")?(<div className="col-sm-3">
+   const addToFictionCard =ReactSession.get("books").map((card) =>(card.bookgenre=="Fiction" && card.booktype=="new")?(<div className="col-sm-3">
    <div
      className="card shadow-lg p-3 mb-5 bg-white rounded "
      style={{ width: "18rem" }}
@@ -45,14 +45,14 @@ useEffect(() =>{
     
    }} >
      <img
-       src={card.book_img}
+       src={card.bookimg}
        className="card-img-top img-thumbnail"
        style={{ maxHeight: 300, minHeight: 300, maxWidth: 250, minWidth: 250 }}
        alt="..."
      />
      <div className="card-body">
        <h5 className="card-title">
-         {card.book_title}
+         {card.booktitle}
        </h5>
      </div>
      </Link>
@@ -61,7 +61,7 @@ useEffect(() =>{
          {card.auther.autherName}
        </li>
        <li className="list-group-item">
-         {card.book_genre}
+         {card.bookgenre}
        </li>
      </ul>
      <div className="card-body">
@@ -70,9 +70,9 @@ useEffect(() =>{
         console.log(card.book_Id);
         var cart = {}
         cart["book"]={}
-        cart["book"]["id"] = card.book_Id;
+        cart["book"]["book_Id"] = card.book_Id;
         cart["user"]={}
-        cart["user"]["id"] = ReactSession.get("userId");
+        cart["user"]["userId"] = ReactSession.get("userId");
         
     
         $.ajax({
@@ -106,7 +106,7 @@ useEffect(() =>{
  )
  
 
- const addToFinanceCard =ReactSession.get("books").map((card) =>(card.book_genre=="Finance")?(<div className="col-sm-3">
+ const addToFinanceCard =ReactSession.get("books").map((card) =>(card.bookgenre=="Finance")?(<div className="col-sm-3">
  <div
    className="card shadow-lg p-3 mb-5 bg-white rounded "
    style={{ width: "18rem" }}
@@ -116,14 +116,14 @@ useEffect(() =>{
     
    }} to="/Details">
    <img
-     src={card.book_img}
+     src={card.bookimg}
      className="card-img-top img-thumbnail"
      style={{ maxHeight: 300, minHeight: 300, maxWidth: 250, minWidth: 250 }}
      alt="..."
    />
    <div className="card-body">
      <h5 className="card-title">
-       {card.book_title}
+       {card.booktitle}
      </h5>
    </div>
    </Link>
@@ -132,12 +132,41 @@ useEffect(() =>{
        {card.auther.autherName}
      </li>
      <li className="list-group-item">
-       {card.book_genre}
+       {card.bookgenre}
      </li>
    </ul>
    <div className="card-body">
      <a href="#" className="card-link"></a>
-     <button className="card-link btn btn-primary">
+     <button className="card-link btn btn-primary" onClick={()=>{
+        console.log(card.book_Id);
+        var cart = {}
+        cart["book"]={}
+        cart["book"]["book_Id"] = card.book_Id;
+        cart["user"]={}
+        cart["user"]["userId"] = ReactSession.get("userId");
+        
+    
+        $.ajax({
+          type: "POST",
+          contentType: "application/json",
+          url: "http://localhost:8080/cart",
+          data: JSON.stringify(cart),
+          dataType: 'json',
+          cache: false,
+          timeout: 600000,
+          success: function (data) {
+    
+            console.log("huva");
+            
+    
+          },
+          error: function (e) {
+            console.log("nahi huva");
+          }
+      });
+
+
+       }}>
        Add To Cart<span className="fas fa-shopping-cart"></span>
      </button>
    </div>
@@ -148,7 +177,10 @@ useEffect(() =>{
     return(<> <hr class="hr hr-blurry" />
     <div className="m-2 d-flex justify-content-between">
       <h3>Fiction</h3>
-      <Link to="/Genre">
+      <Link onClick={()=>{
+        ReactSession.set("genresearch","Fiction");
+        
+      }} to="/Genre">
       <button className="card-link btn btn-primary">
       View More
     </button></Link>

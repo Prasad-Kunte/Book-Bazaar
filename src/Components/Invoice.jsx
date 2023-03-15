@@ -1,8 +1,56 @@
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
+import ReactToPrint, { useReactToPrint } from "react-to-print";
+import { ReactSession } from 'react-client-session';
+
 function Invoice() {
-    return (
+  const componentPDF = useRef();
+  const generatePDF = useReactToPrint({
+    content: () => componentPDF.current,
+    documentTitle: "Invoice",
+    //onAfterPrint: () => alert("pdf"),
+  });
+
+  //
+  const form1 = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_not1xee",
+        "template_4kwzedq",
+        form1.current,
+        "-YnZ7baBkpPL-doJ4"
+      )
+      .then(
+        (result) => {
+          //console.log(form.current);
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+  var sr=1;
+  const addToFictionCard =ReactSession.get("cartbooks").map((card) =>(card.user.id===ReactSession.get("userId"))?(<> <tr>
+    <td className="center">{sr++}</td>
+    <td className="left">{card.book.booktitle}</td>
+    
+    
+    <td className="right">&#8377; {card.book.bookprice}</td>
+  </tr></>):(<></>)
+
+
+)
+  
+  return (
+    <form ref={form1} name="nvoice">
       <div className="container-fluid">
         <div id="ui-view" data-select2-id="ui-view">
-          <div>
+          <div ref={componentPDF}>
             <div className="card">
               <div className="card-header">
                 Invoice
@@ -10,11 +58,12 @@ function Invoice() {
                 <a
                   className="btn btn-sm btn-secondary float-right mr-1 d-print-none"
                   href="#"
-                  onclick="javascript:window.print();"
+                  onClick={generatePDF}
                   data-abc="true"
                 >
                   <i className="fa fa-print" /> Print
                 </a>
+                
                 <a
                   className="btn btn-sm btn-success float-right mr-1 d-print-none"
                   href="#"
@@ -23,75 +72,24 @@ function Invoice() {
                   <i className="fa fa-save" /> Save
                 </a>
               </div>
+
               <div className="card-body">
-                <div className="row mb-4">
-                  <div className="col-sm-4">
-                    <h6 className="mb-3">From:</h6>
-                    <div>
-                      <strong>BBBootstrap.com</strong>
-                    </div>
-                    <div>42, Awesome Enclave</div>
-                    <div>New York City, New york, 10394</div>
-                    <div>Email: admin@bbbootstrap.com</div>
-                    <div>Phone: +48 123 456 789</div>
-                  </div>
-                  <div className="col-sm-4 text-center">
-                    <h6 className="mb-3">To:</h6>
-                    <div>
-                      <strong>BBBootstrap.com</strong>
-                    </div>
-                    <div>42, Awesome Enclave</div>
-                    <div>New York City, New york, 10394</div>
-                    <div>Email: admin@bbbootstrap.com</div>
-                    <div>Phone: +48 123 456 789</div>
-                  </div>
-                  <div className="col-sm-4 text-end">
-                    <h6 className="mb-3">Details:</h6>
-                    <div>
-                      Invoice
-                      <strong>#BBB-10010110101938</strong>
-                    </div>
-                    <div>April 30, 2019</div>
-                    <div>VAT: NYC09090390</div>
-                    <div>Account Name: BBBootstrap Inc</div>
-                    <div>
-                      <strong>SWIFT code: 99 8888 7777 6666 5555</strong>
-                    </div>
-                  </div>
-                </div>
+                
                 <div className="table-responsive-sm">
                   <table className="table table-striped">
                     <thead>
                       <tr>
                         <th className="center">Sr. No.</th>
                         <th>Item</th>
-                        <th>Description</th>
-                        <th className="center">Quantity</th>
-                        <th className="right">Unit Cost</th>
-                        <th className="right">Total</th>
+                        
+                        
+                       
+                        <th className="right">price</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td className="center">1</td>
-                        <td className="left">Iphone 10</td>
-                        <td className="left">
-                          Apple iphoe 10 with extended warranty
-                        </td>
-                        <td className="center">16</td>
-                        <td className="right">&#8377; 999,00</td>
-                        <td className="right">&#8377; 999,00</td>
-                      </tr>
-                      <tr>
-                        <td className="center">2</td>
-                        <td className="left">Samsung S6</td>
-                        <td className="left">
-                          Samsung S6 with extended warranty
-                        </td>
-                        <td className="center">20</td>
-                        <td className="right">&#8377; 150,00</td>
-                        <td className="right">&#8377; 3.000,00</td>
-                      </tr>
+                      
+                      {addToFictionCard}
                     </tbody>
                   </table>
                 </div>
@@ -101,7 +99,7 @@ function Invoice() {
                     <br></br>
                     <br></br>
                     <pre>
-                      -----------------------------
+                      ---------------
                       <br></br>
                     </pre>
                     <div className="collapse navbar-collapse d-flex align-items-center justify-content-center">
@@ -119,51 +117,41 @@ function Invoice() {
                         </li>
                       </ul>
                     </div>
-                    <pre>-----------------------------</pre>
+                    <pre>
+                      ---------------
+                      <br></br>
+                    </pre>
                   </div>
-  
+
                   <div className="col-lg-4"></div>
                   <div className="col-lg-4 col-sm-5 ml-auto">
                     <table className="table table-clear">
                       <tbody>
+                        
+                        
                         <tr>
                           <td className="left">
-                            <strong>Subtotal</strong>
-                          </td>
-                          <td className="right">&#8377; 8.497,00</td>
-                        </tr>
-                        <tr>
-                          <td className="left">
-                            <strong>Discount (20%)</strong>
-                          </td>
-                          <td className="right">&#8377; 1,699,40</td>
-                        </tr>
-                        <tr>
-                          <td className="left">
-                            <strong>VAT (10%)</strong>
-                          </td>
-                          <td className="right">&#8377; 679,76</td>
-                        </tr>
-                        <tr>
-                          <td className="left">
-                            <strong>Total</strong>
+                            <strong>Total paid</strong>
                           </td>
                           <td className="right">
-                            <strong>&#8377; 7.477,36</strong>
+                            <strong>&#8377; {ReactSession.get("totalPrice")+20}</strong>
                           </td>
                         </tr>
                       </tbody>
                     </table>
-  
                   </div>
                 </div>
               </div>
-              <div className="text-center text-warning"> Thanks for Shopping</div>
+              <div className="text-center text-warning">
+                {" "}
+                Thanks for Shopping
+              </div>
               <div className="text-center text-success"> Visit Again ...</div>
             </div>
           </div>
         </div>
       </div>
-    );
-  }
-  export default Invoice;
+    </form>
+  );
+}
+export default Invoice;

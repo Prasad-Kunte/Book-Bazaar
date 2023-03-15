@@ -1,4 +1,5 @@
  import {Link} from 'react-router-dom'
+ import axios from 'axios';
  import * as mdb from 'mdb-ui-kit'; 
  import { Input } from 'mdb-ui-kit';
  import { ReactSession } from 'react-client-session';
@@ -7,7 +8,16 @@ import { useEffect } from 'react';
 
  
 function Navbar(){
+  useEffect(() =>{
+
+    const getdata = async () => {
+      ReactSession.set("booksgenre", (await axios.get("http://localhost:8080/getallbookgenre")).data);
+      
+    };
   
+    getdata();
+  },[])
+
 
   function logout(){
     ReactSession.set("userId","");
@@ -28,6 +38,25 @@ function Navbar(){
     ReactSession.set("location","rent");
     window.location.replace("http://localhost:3000/");
   };
+
+
+  const getData=(e)=>{
+    const getdata1 = async () => {
+      ReactSession.set("Searchbooks", (await axios.get("http://localhost:8080/Booksuu/"+e.target.value)).data);
+      console.log(ReactSession.get("Searchbooks"));
+      
+    };
+  
+    getdata1();
+
+  }
+  const printGenre=ReactSession.get("booksgenre").map((g)=>(<>
+   <li>
+                    <a className="dropdown-item" href="#">
+                    {g}
+                    </a>
+                  </li>
+  </>))
     return(<>
    <div className=" sticky-top  background shadow-lg "> 
         
@@ -49,6 +78,7 @@ function Navbar(){
           className="form-control "
           placeholder="search for books"
           aria-label="Search"
+          onChange={getData}
           style={{maxHeight: "5vh", minHeight: "5vh"}}
         />
         <Link to="ProductPage">
@@ -103,170 +133,13 @@ function Navbar(){
                   className="dropdown-menu dropdown-menu-end"
                   aria-labelledby="navbarDropdownMenuAvatar"
                 >
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Fiction
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Novel
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="logout">
-                      Narrative
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Genre fiction
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Science fiction
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Mystery
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Non-fiction
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Fantasy Fiction
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Literary fiction
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Horror fiction
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Historical Fiction
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Children's literature
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Thriller
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Romance novel
-                    </a>
-                  </li>
+                  
+                 {printGenre}
                   
                 </ul>
               </div>
     </li>
-    <li className="dropdown">
     
-                <a
-                  className="dropdown-toggle  hidden-arrow "
-                  href="#"
-                  id="navbarDropdownMenuAvatar"
-                  role="button"
-                  data-mdb-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                 Year
-                </a>
-                <ul
-                  className="dropdown-menu dropdown-menu-end"
-                  aria-labelledby="navbarDropdownMenuAvatar"
-                >
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Fiction
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Novel
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="logout">
-                      Narrative
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Genre fiction
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Science fiction
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Mystery
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Non-fiction
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Fantasy Fiction
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Literary fiction
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Horror fiction
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Historical Fiction
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Children's literature
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Thriller
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                    Romance novel
-                    </a>
-                  </li>
-                  
-                </ul>
-              
-    </li>
     <li>{(ReactSession.get("email")!= "logout")?((ReactSession.get("role")=="Seller")?(
     <div className="dropdown ">
                 <a
